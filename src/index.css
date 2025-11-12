@@ -29,6 +29,11 @@ All colors MUST be HSL.
     --accent: 30 95% 55%;
     --accent-foreground: 0 0% 100%;
 
+    --navy: 215 54% 14%;
+    --navy-light: 215 40% 22%;
+    --orange-accent: 28 100% 50%;
+    --grey-light: 220 13% 91%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
