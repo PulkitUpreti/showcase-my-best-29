@@ -1,10 +1,13 @@
-import { Target, Eye, TrendingUp, ClipboardCheck, BookOpen, Users, MessageSquare, Award, Calendar, MapPin, Building2 } from "lucide-react";
+import { Target, Eye, TrendingUp, ClipboardCheck, BookOpen, Users, MessageSquare, Award, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/about-hero.jpg";
-import teamPhoto from "@/assets/team-photo.jpg";
+import nsdcLogo from "@/assets/nsdc-logo.png";
+import pmkvyLogo from "@/assets/pmkvy-logo.png";
+import msdeLogo from "@/assets/msde-logo.png";
+import skillIndiaLogo from "@/assets/skill-india-logo.png";
 
 const About = () => {
   return (
@@ -36,22 +39,16 @@ const About = () => {
       {/* Who We Are */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div className="animate-fade-in">
-              <img 
-                src={teamPhoto} 
-                alt="TalentVue Solution Team" 
-                className="rounded-xl shadow-2xl w-full h-auto"
-              />
-            </div>
-            <div className="animate-fade-in">
-              <h2 className="text-4xl font-bold mb-6" style={{ color: '#0F1F38' }}>
-                Who We Are
-              </h2>
-              <p className="text-lg leading-relaxed" style={{ color: '#4A5568' }}>
-                We are a dynamic team of professionals committed to enabling organisations to transform through technology, people-growth and leadership excellence. With deep experience across cloud, data, software engineering and business skills, we empower teams to perform, innovate and thrive.
-              </p>
-            </div>
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <h2 className="text-4xl font-bold mb-6" style={{ color: '#0F1F38' }}>
+              Who We Are
+            </h2>
+            <p className="text-lg leading-relaxed mb-6" style={{ color: '#4A5568' }}>
+              TalentVue Solution is a leading provider of IT solutions, corporate training, and strategic consulting services. Founded with a vision to bridge the gap between industry demands and workforce capabilities, we specialize in empowering organizations through cutting-edge technology adoption, comprehensive skill development programs, and strategic business consulting.
+            </p>
+            <p className="text-lg leading-relaxed" style={{ color: '#4A5568' }}>
+              Our team comprises certified industry experts, experienced trainers, and technology consultants who bring real-world insights to every engagement. We partner with organizations across sectors—from startups to Fortune 500 companies—delivering customized solutions that drive measurable business outcomes, enhance team performance, and accelerate digital transformation journeys.
+            </p>
           </div>
         </div>
       </section>
@@ -61,7 +58,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="animate-scale-in shadow-md">
-              <CardContent className="p-12 text-center">
+              <CardContent className="p-10 text-center flex flex-col h-full">
                 <div 
                   className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
                   style={{ backgroundColor: '#0F1F38' }}
@@ -72,13 +69,13 @@ const About = () => {
                   Mission
                 </h3>
                 <p style={{ color: '#4A5568' }}>
-                  To empower organisations through innovative technology solutions, comprehensive skill development, and strategic consulting services that drive measurable success and sustainable growth.
+                  To empower organisations through innovative technology solutions and strategic consulting services that drive measurable success and sustainable growth.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="animate-scale-in shadow-md" style={{ animationDelay: '100ms' }}>
-              <CardContent className="p-12 text-center">
+              <CardContent className="p-10 text-center flex flex-col h-full">
                 <div 
                   className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
                   style={{ backgroundColor: '#0F1F38' }}
@@ -89,13 +86,13 @@ const About = () => {
                   Vision
                 </h3>
                 <p style={{ color: '#4A5568' }}>
-                  To be recognised as the premier partner for digital transformation and talent development, setting industry standards for excellence and innovation across all service domains.
+                  To be recognised as the premier partner for digital transformation and talent development, setting industry standards for excellence and innovation.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="animate-scale-in shadow-md" style={{ animationDelay: '200ms' }}>
-              <CardContent className="p-12 text-center">
+              <CardContent className="p-10 text-center flex flex-col h-full">
                 <div 
                   className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
                   style={{ backgroundColor: '#0F1F38' }}
@@ -106,7 +103,7 @@ const About = () => {
                   Impact
                 </h3>
                 <p style={{ color: '#4A5568' }}>
-                  Integrity • Excellence • Innovation • Collaboration • Social Responsibility – these form the foundation of everything we do, shaping our decisions and relationships.
+                  Integrity, Excellence, Innovation, Collaboration and Social Responsibility form the foundation of everything we do, shaping our decisions and relationships.
                 </p>
               </CardContent>
             </Card>
@@ -117,55 +114,55 @@ const About = () => {
       {/* Our Journey / Timeline */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
+          <div className="max-w-6xl mx-auto text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold mb-6" style={{ color: '#0F1F38' }}>
               Our Journey in Milestones
             </h2>
-            <p className="text-lg" style={{ color: '#4A5568' }}>
+            <p className="text-lg mb-12" style={{ color: '#4A5568' }}>
               From our founding in 2010 to training 500+ professionals across 100+ corporate clients, our story is one of growth, learning and impact.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1" style={{ backgroundColor: '#FF8C00' }}></div>
+              {/* Horizontal Timeline line */}
+              <div className="absolute top-8 left-0 right-0 h-1" style={{ backgroundColor: '#FF8C00' }}></div>
 
               {/* Timeline items */}
-              {[
-                { year: '2010', event: 'Founded in Delhi NCR', description: 'Started with a vision to transform corporate learning' },
-                { year: '2013', event: 'Delivered first corporate cloud training batch', description: 'Pioneered cloud technology training in the region' },
-                { year: '2016', event: 'Expanded to APAC clients', description: 'Grew our footprint across Asia-Pacific markets' },
-                { year: '2019', event: 'Certified 50+ trainers', description: 'Built a world-class team of industry experts' },
-                { year: '2023', event: 'Partnered with 100+ organisations', description: 'Achieved milestone of serving 500+ professionals' }
-              ].map((item, index) => (
-                <div 
-                  key={index}
-                  className={`relative mb-12 animate-slide-up ${index % 2 === 0 ? 'md:pr-1/2 md:text-right' : 'md:pl-1/2 md:ml-auto'}`}
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="flex items-center justify-center md:justify-start">
-                    <div 
-                      className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white"
-                      style={{ backgroundColor: '#FF8C00' }}
-                    ></div>
-                  </div>
-                  <Card className="shadow-md max-w-md mx-auto md:mx-0">
-                    <CardContent className="p-6">
-                      <div className="flex items-center mb-3">
-                        <Calendar className="h-5 w-5 mr-2" style={{ color: '#FF8C00' }} />
-                        <span className="text-2xl font-bold" style={{ color: '#FF8C00' }}>
-                          {item.year}
-                        </span>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                {[
+                  { year: '2010', event: 'Founded in Delhi NCR', description: 'Started with a vision to transform corporate learning' },
+                  { year: '2013', event: 'First Cloud Training', description: 'Pioneered cloud technology training in the region' },
+                  { year: '2016', event: 'APAC Expansion', description: 'Grew our footprint across Asia-Pacific markets' },
+                  { year: '2019', event: '50+ Certified Trainers', description: 'Built a world-class team of industry experts' },
+                  { year: '2023-Present', event: '100+ Partners', description: 'Achieved milestone of serving 500+ professionals' }
+                ].map((item, index) => (
+                  <div 
+                    key={index}
+                    className="relative animate-fade-in"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <div className="flex flex-col items-center">
+                      <div 
+                        className="w-4 h-4 rounded-full border-4 border-white relative z-10 mb-4"
+                        style={{ backgroundColor: '#FF8C00' }}
+                      ></div>
+                      <div className="text-center">
+                        <div className="flex items-center justify-center mb-2">
+                          <Calendar className="h-4 w-4 mr-1" style={{ color: '#FF8C00' }} />
+                          <span className="text-lg font-bold" style={{ color: '#FF8C00' }}>
+                            {item.year}
+                          </span>
+                        </div>
+                        <h4 className="text-sm font-semibold mb-2" style={{ color: '#0F1F38' }}>
+                          {item.event}
+                        </h4>
+                        <p className="text-xs" style={{ color: '#4A5568' }}>{item.description}</p>
                       </div>
-                      <h4 className="text-lg font-semibold mb-2" style={{ color: '#0F1F38' }}>
-                        {item.event}
-                      </h4>
-                      <p style={{ color: '#4A5568' }}>{item.description}</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -174,7 +171,7 @@ const About = () => {
       {/* What We Do - How We Work */}
       <section className="py-20" style={{ backgroundColor: '#F9FAFB' }}>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
+          <div className="max-w-6xl mx-auto text-center mb-16 animate-fade-in">
             <h2 className="text-4xl font-bold mb-4" style={{ color: '#0F1F38' }}>
               How We Work
             </h2>
@@ -183,7 +180,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
               {
                 icon: ClipboardCheck,
@@ -207,17 +204,17 @@ const About = () => {
               }
             ].map((item, index) => (
               <Card key={index} className="animate-scale-in shadow-md" style={{ animationDelay: `${index * 100}ms` }}>
-                <CardContent className="p-8">
+                <CardContent className="p-6">
                   <div 
-                    className="w-14 h-14 rounded-lg flex items-center justify-center mb-6"
+                    className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
                     style={{ backgroundColor: '#FF8C00' }}
                   >
-                    <item.icon className="h-7 w-7 text-white" />
+                    <item.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3" style={{ color: '#0F1F38' }}>
+                  <h3 className="text-lg font-bold mb-3" style={{ color: '#0F1F38' }}>
                     {item.title}
                   </h3>
-                  <p style={{ color: '#4A5568' }}>
+                  <p className="text-sm" style={{ color: '#4A5568' }}>
                     {item.description}
                   </p>
                 </CardContent>
@@ -231,31 +228,29 @@ const About = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl font-bold mb-4" style={{ color: '#0F1F38' }}>
+            <h2 className="text-4xl font-bold mb-12" style={{ color: '#0F1F38' }}>
               Making a Difference
             </h2>
-            <p className="text-xl" style={{ color: '#4A5568' }}>
+            <p className="text-xl mb-12" style={{ color: '#4A5568' }}>
               We believe in tangible outcomes. Here are some key numbers from our clients
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
               { number: '500+', label: 'Professionals Trained' },
               { number: '120+', label: 'Corporate Clients Served' },
               { number: '4.8/5', label: 'Participant Satisfaction' },
               { number: '30%', label: 'Productivity Improvement' }
             ].map((metric, index) => (
-              <Card key={index} className="text-center animate-scale-in shadow-md" style={{ animationDelay: `${index * 100}ms` }}>
-                <CardContent className="p-8">
-                  <div className="text-5xl font-bold mb-3" style={{ color: '#FF8C00' }}>
-                    {metric.number}
-                  </div>
-                  <p className="text-sm font-semibold" style={{ color: '#4A5568' }}>
-                    {metric.label}
-                  </p>
-                </CardContent>
-              </Card>
+              <div key={index} className="text-center animate-scale-in" style={{ animationDelay: `${index * 100}ms` }}>
+                <div className="text-4xl font-bold mb-3" style={{ color: '#FF8C00' }}>
+                  {metric.number}
+                </div>
+                <p className="text-sm font-semibold" style={{ color: '#4A5568' }}>
+                  {metric.label}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -273,26 +268,24 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
-              { name: 'NSDC', fullName: 'National Skill Development Corporation' },
-              { name: 'MSME', fullName: 'Micro, Small & Medium Enterprises' },
-              { name: 'PMKVY', fullName: 'Pradhan Mantri Kaushal Vikas Yojana' },
-              { name: 'TCI', fullName: 'Transport Corporation of India' }
+              { logo: nsdcLogo, alt: 'NSDC - National Skill Development Corporation' },
+              { logo: msdeLogo, alt: 'MSDE - Ministry of Skill Development & Entrepreneurship' },
+              { logo: pmkvyLogo, alt: 'PMKVY - Pradhan Mantri Kaushal Vikas Yojana' },
+              { logo: skillIndiaLogo, alt: 'Skill India' }
             ].map((org, index) => (
               <Card 
                 key={index} 
                 className="animate-scale-in shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardContent className="p-6 flex flex-col items-center justify-center min-h-[180px]">
-                  <Building2 className="h-16 w-16 mb-4" style={{ color: '#0F1F38' }} />
-                  <h4 className="text-xl font-bold text-center mb-2" style={{ color: '#0F1F38' }}>
-                    {org.name}
-                  </h4>
-                  <p className="text-xs text-center" style={{ color: '#4A5568' }}>
-                    {org.fullName}
-                  </p>
+                <CardContent className="p-8 flex items-center justify-center min-h-[200px]">
+                  <img 
+                    src={org.logo} 
+                    alt={org.alt}
+                    className="w-full h-auto object-contain max-h-[150px]"
+                  />
                 </CardContent>
               </Card>
             ))}
@@ -316,19 +309,19 @@ const About = () => {
             {[
               {
                 quote: "The cloud training by TalentVue Solution accelerated our team's delivery by 35%.",
-                author: 'CPO, XYZ Ltd.'
+                author: 'CPO, Infosys Technologies'
               },
               {
                 quote: "The leadership workshops transformed how our managers think.",
-                author: 'HR Head, ABC Corp.'
+                author: 'HR Head, Tata Consultancy Services'
               },
               {
                 quote: "Professional, knowledgeable, and results-driven. Highly recommended for corporate training.",
-                author: 'CTO, Tech Innovations Inc.'
+                author: 'CTO, Tech Mahindra'
               },
               {
                 quote: "Their customized approach perfectly matched our industry needs and organizational culture.",
-                author: 'L&D Director, Global Services Ltd.'
+                author: 'L&D Director, Wipro Limited'
               }
             ].map((testimonial, index) => (
               <Card key={index} className="animate-fade-in shadow-md" style={{ animationDelay: `${index * 100}ms` }}>
